@@ -10,11 +10,22 @@
     
 """
 
+
 def hello_user():
-    """
-    Замените pass на ваш код
-    """
-    pass
-    
+  user_say = ''
+  while True:
+    try:
+      user_say = input('Как дела? ').lower().capitalize()
+      if user_say == 'Хорошо':
+        print('Ну и хорошо раз хорошо')
+        break
+      else:
+        print(f'Что значит твое "{user_say}" ?')
+    except KeyboardInterrupt:
+            print()
+            print("Пока!")
+            break
+
+
 if __name__ == "__main__":
     hello_user()
