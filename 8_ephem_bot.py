@@ -2,7 +2,7 @@ import ephem
 from datetime import datetime
 import logging
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
-#import settings
+import settings
 
 logging.basicConfig(filename='bot.log', level=logging.INFO)
 
