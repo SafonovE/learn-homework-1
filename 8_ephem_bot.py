@@ -10,7 +10,7 @@ logging.basicConfig(filename='bot.log', level=logging.INFO)
 '''PROXY = {'proxy_url': settings.PROXY_URL,
     'urllib3_proxy_kwargs': {'username': settings.PROXY_USERNAME, 'password': settings.PPROXY_PASSWORD}}'''
 
-today = datetime.date.today()
+today = datetime.date.date(datetime.now())
 
 planet_dict = {'Mars': ephem.Mars(today), 'Venus': ephem.Venus(today), 'Saturn': ephem.Saturn(today), 
 'Jupiter': ephem.Jupiter(today), 'Neptune': ephem.Neptune(today), 
