@@ -20,15 +20,15 @@ def what_age(age=-1):
     return age
 
 def age_for_job(age):
-  if age <= 6:
-    job = "Детский сад"
-  elif age <= 16:
-    job = "Школа" 
-  elif age <= 21:
-    job = "ВУЗ"
-  else:
-    job = "Работать" 
-  return job
+    if age <= 6:
+        job = "Детский сад"
+    elif age <= 16:
+        job = "Школа" 
+    elif age <= 21:
+        job = "ВУЗ"
+    else:
+        job = "Работать" 
+    return job
 
 
 

@@ -10,7 +10,7 @@ logging.basicConfig(filename='bot.log', level=logging.INFO)
 '''PROXY = {'proxy_url': settings.PROXY_URL,
     'urllib3_proxy_kwargs': {'username': settings.PROXY_USERNAME, 'password': settings.PPROXY_PASSWORD}}'''
 
-today = datetime.date(datetime.now())
+today = datetime.date.today()
 
 planet_dict = {'Mars': ephem.Mars(today), 'Venus': ephem.Venus(today), 'Saturn': ephem.Saturn(today), 
 'Jupiter': ephem.Jupiter(today), 'Neptune': ephem.Neptune(today), 
@@ -29,7 +29,7 @@ def talk_to_me(update, context):
 def what_constellation(update, context):
     planet_name = update.message.text.split()[1].lower().capitalize()
     ephem_body = planet_dict.get(planet_name, None)
-    if ephem_body!=None:
+    if ephem_body is not None:
         constellation = ephem.constellation(planet_dict[planet_name])
         update.message.reply_text(constellation[1])
     else:

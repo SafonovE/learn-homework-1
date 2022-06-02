@@ -23,7 +23,8 @@ def discounted(price, discount, max_discount=20):
         if discount >= max_discount:
             return price
         else:
-            return price - (price * discount / 100 / 'd')
+            price_with_discount = price - (price * discount / 100)
+            return(price_with_discount)
     except (ValueError, TypeError):
         print("приведение типов не сработало")
     

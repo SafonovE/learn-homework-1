@@ -37,7 +37,7 @@ def main(phone_sold_list):
 
   print(f"Всего проданных товаров - {sum_all_phones_sold}\n")
   
-  avg_all_items_sold = sum_phones / len(phone_sold_list)
+  avg_all_items_sold = sum_all_phones_sold / len(phone_sold_list)
   print(f"В среднем продаж всех товаров - {int(avg_all_items_sold)}")
   
 if __name__ == "__main__":
